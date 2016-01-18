@@ -1,0 +1,60 @@
+
+{{#if message}}
+  <p class = "message">{{message}}</p>
+{{/if}}
+
+<a href="/publicdecks"><button class="inputButtonLarge">Browse Public Decks</button></a>
+
+{{#each decks}}
+  <div id="{{Name}}">
+    <h5> <img class="deckLogo" src="../images/decklogoOrange.svg"/> {{Name}} </h5>
+
+    <form action="/studydeck" method="post">
+    <input type="hidden" name="name" value="{{Name}}">
+    <input class="inputButtonLarge" type="submit" value="Study Deck"></input>
+    </form>
+
+    <!-- <li>
+      <button class="inputButton showDeckButtons" value="{{_id}}">Edit Deck</button>
+    </li> -->
+    <!-- <div id = "{{_id}}deckButtons" class="hidden"> -->
+    <li>
+        <form action="/editdeck" method="post">
+          <input type="hidden" name="name" value="{{Name}}">
+          <input class="inputButton" type="submit" value="Edit Cards"></input>
+        </form>
+    </li>
+    <!-- <li >
+      <button type="submit" class="inputButton" value="{{_id}}" id="{{_id}}makePublic">Make Public</button>
+      <button type="submit" class="inputButton" value="{{_id}}" id="{{_id}}makePrivate"> Make Private</button>
+    </li> -->
+    <!-- delete the deck top of the page -->
+    <li>
+      <form action="/mydecks" method="get">
+        <button type="submit" class="inputButton deleteADeck" id="deleteDeck" value="{{_id}}"> Delete Deck</button>
+      </form>
+    </li>
+
+    <!-- </div> -->
+
+
+    </div>
+    </li>
+{{/each}}
+
+<br>
+
+<div id="addDeck"><h4> Add A Deck</h4></div>
+<div class="addCard hidden" id="addDeckDiv">
+  <form action="/mydecks" method="get" id="addDeckForm">
+    <h4> Deck Name: </h4>
+    <p><input type="text" name="Name" class="inputBoxLarge"></input></p>
+    <input type="hidden" name="User" value="{{currentUser}}"></input>
+    <h4> Deck Privacy: </h4>
+      <p class="message"><input type="radio" class="radioButton" name="Public" value="true">Public Deck</p>
+      <p class="message"><input type="radio" class="radioButton" name="Public" value="false">Private Deck</p> <br>
+    <span class="inputButton closeDeck">x</span>
+    <input type="submit" value="Add Deck" class="inputButton" id="addADeck"></input>
+  </form>
+
+</div>
