@@ -1,48 +1,61 @@
-@teal: #3BB38F;
-@orange: rgba(215, 85, 42, 0.8);
-
-
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: url('/images/background.png')
+  background-image: url("/images/recordstorebackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-  margin-top: 15em;
-  padding: 3em;
+  margin-top: 10%;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4em;
+  border-radius: 20px;
 }
+
+button {
+  background: none;
+
+}
+
+
+li {
+  display: inline-block;
+}
+
+h1 {
+  font-family: 'Just Another Hand', cursive;
+  position: fixed;
+  left: 5px;
+  top: -20px;
+  margin-left: 43%;
+  color: white;
+  font-size: 53px;
+  font-weight: normal;
+}
+
 header {
   position: fixed;
-  background: @orange;
+  background: purple;
   top: 0;
   left: 0;
   width: 100%;
-  align: center;
+  padding-top: 15px;
 }
 
 .headerLogo {
   display: inline;
   float: left;
-  width: 25%;
-}
-
-.headerTitle {
-  display: inline;
-  float: left;
-  width: 75%;
-}
-
-.navBar {
-  margin-top: 0;
-  margin: 20px;
+  width: 13%;
 }
 
 
 .headerButtons {
   display: inline;
   float: right;
-  padding-top: 30px;
   padding-right: 15px;
+  padding-bottom: 20px;
 }
 
 .logoutButton {
@@ -54,244 +67,18 @@ header {
 }
 
 .navLogo {
-  padding: 2em;
-  height: 10em;
+  padding: 15px;
+  height: 6.5em;
 }
+
 
 .navButton {
-  margin: 5px;
-  font-size: 2.3em;
-  border: 3px solid white;
-  border-radius: 9px;
-  background: none;
-  color: white;
+  font-size: 14px;
   padding: 8px;
-}
-
-.deckLogo {
-  padding: 0;
-  height: 1em;
-  margin-bottom: 0;
-}
-
-h1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 7em;
-  color: @orange;
-  text-shadow:
-   -3px -3px 0 white,
-    2px -2px 0 white,
-    -2px 2px 0 white,
-     3px 3px 0 white;
-  margin-bottom: 10px;
-}
-
-h2, h3, h5 {
- text-shadow:
-  -4px -4px 0 @teal,
-   4px -4px 0 @teal,
-   -4px 4px 0 @teal,
-    4px 4px 0 @teal;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 6em;
-  color: white;
-  text-align: center;
-  margin-bottom: 0.3em;
-}
-
-h5 {
-  text-shadow:
-   -4px -4px 0 @orange,
-    4px -4px 0 @orange,
-    -4px 4px 0 @orange,
-     4px 4px 0 @orange;
-  font-size: 5em;
-}
-
-h3 {
-  font-size: 6em;
-  text-shadow: none;
-  color: @orange;
-}
-
-.uiInput {
-  font-size: 2.5em;
-  text-align: center;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  border-radius: 1em;
-  margin: 5px;
-  padding: 5px;
-}
-
-.inputButton, .ui-input-button-save,.showAnswerButton, .inputButtonLarge, .inputButtonLargeHidden, .addCardLogo, .inputButtonSave, .inputButtonEdit, .inputButtonDelete, .inputButtonCloseAdd {
-  font-size: 2.5em;
-  font-family: 'Orbitron', sans-serif;
-  color: @teal;
-  border: 3px solid @teal;
-  border-radius: 0.6em;
-  padding: 15px;
+  border: 2px solid white;
   background: none;
-  margin: 10px;
+  color: white;
+  border-radius: 4px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
-.inputButtonLarge, .inputButtonLargeHidden, .addCardLogo, {
-    border: 3px solid @orange;
-    color: @orange;
-    font-size: 3em;
-}
-
-
-.inputButtonLargeHidden, .inputButtonHidden, .saveCardButton {
-    display: none;
-}
-
-.inputButtonCloseAdd {
-  width: 3em;
-}
-.message {
-  font-size: 3em;
-  font-family: 'Orbitron', sans-serif;
-  color: #3BB38F;
-  padding: 20px;
-  width: 70%;
-  margin-bottom: 10px;
-}
-
-
-.author {
-  font-size: 2.2em;
-  font-family: 'Orbitron', sans-serif;
-  color: #3BB38F;
-  padding: 20px;
-  width: 70%;
-  margin: 0;
-}
-
-.cardDisplay, .addCard {
-  border: 4px solid grey;
-  width: 80%;
-  margin: 2em;
-  background: rgba(255, 255,255, 0.6);
-  padding: 3em;
-  position: relative;
-  border-radius: 2em;
-}
-
-textarea {
-  width: 60%;
-}
-
-.inputBox {
-  font-size: 3em;
-  text-align: center;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  border-radius: 1em;
-  margin: 5px;
-  padding: 5px;
-  height: 3em;
-  width: 80%;
-}
-
-.inputBoxLarge {
-  font-size: 2em;
-  text-align: center;
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  border-radius: 1em;
-  margin: 5px;
-  padding: 5px;
-  height: 4em;
-}
-
-.addCard, .inputBox {
-  display: none;
-}
-
-
-.question, .answer {
-  font-size: 3em;
-  padding: 10px;
-}
-
-.radioButton {
-  width: 3em;
-  height: 3em;
-}
-
-li {
-  display: inline-block;
-}
-
-td {
-  padding: 2em;
-}
-
-.deckButtons {
-  padding: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-
-
-h4 {
-  font-size: 2.8em;
-  font-family: 'Orbitron', sans-serif;
-  color: @orange;
-  border: 3px solid @orange;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  width: 50%;
-  border-radius: 0.7em;
-  margin-bottom: 10px;
-}
-
-.answer {
-  font-size: 2.8em;
-  font-family: 'Orbitron', sans-serif;
-  color: @teal;
-  border: 3px solid @teal;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  border-radius: 0.7em;
-  margin-bottom: 10px;
-  width: 80%;
-  display: none;
-}
-
-
-.addCardLogo {
-  background: url("../images/cardOrange.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-  padding-right: 1.7em;
-}
-
-.gallery-cell {
-  width: 70%;
-}
-
-.flickity-prev-next-button {
-  width: 3em;
-  height: 3em;
-}
-
-// 
-// @media screen
-//   and (min-device-width: 1200px)
-//   and (max-device-width: 1600px)
-//   and (-webkit-min-device-pixel-ratio: 1) {
-//
-//         font: 4px "Lucida Grande", Helvetica, Arial, sans-serif;
-// }
-//
-// /* ----------- Retina Screens ----------- */
-// @media screen
-//   and (min-device-width: 1200px)
-//   and (max-device-width: 1600px)
-//   and (-webkit-min-device-pixel-ratio: 2)
-//   and (min-resolution: 192dpi) {
-//
-//     font: 4px "Lucida Grande", Helvetica, Arial, sans-serif;
-// }

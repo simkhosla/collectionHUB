@@ -14,7 +14,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/register', function(req, res) {
-  res.render('/pages/login', {user: req.user});
+  res.render('pages/login', {user: req.user});
 });
 
 router.post('/register', function(req, res) {
@@ -24,29 +24,25 @@ router.post('/register', function(req, res) {
   }),
   req.body.password, function(error, account) {
       if (error) {
-        return res.render('/pages/login', { account: account, message: "This username already exists!" });
+        return res.render('login', { account: account, message: "This username already exists!" });
       }
       passport.authenticate('local')(req, res, function() {
-        res.redirect('/mydecks');
+        res.redirect('/mycollection', { currentUser: req.user });
       });
   })
 });
 
 router.get('/login', function(req, res) {
-  res.render('pages/login', { user: req.user });
+  res.render('login', { user: req.user });
 });
-
-// router.post('/login',
-//   passport.authenticate('local'), function(req, res) {
-//   res.redirect('/');
-// });
 
 router.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
-    res.redirect('/mydecks');
+    res.redirect('/mycollection');
   }
 );
+
 
 
 router.get('/leave', function(req,res) {
